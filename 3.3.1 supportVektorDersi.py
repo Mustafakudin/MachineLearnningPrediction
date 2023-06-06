@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Jul  6 18:50:13 2020
-
-@author: sadievrenseker
-"""
 
 #1.kutuphaneler
 import numpy as np
@@ -67,10 +62,10 @@ from sklearn.svm import SVR
 
 svr_reg = SVR(kernel='rbf')  ## kernel secicegimiz model rpf en mantıklı olanı 
 
-svr_reg.fit(x_olcekli, y_olcekli)
-plt.scatter(x_olcekli,y_olcekli)
-plt.plot(x_olcekli, svr_reg.predict(x_olcekli))
-plt.show()
+svr_reg.fit(x_olcekli, y_olcekli)  ## baglantıyı kuruyoruz iki değer arasındaki bağlantıyı bbulmak istiyoruz 
+plt.scatter(x_olcekli,y_olcekli , color="red") ## x ve y boyutlarını yapıcak 
+plt.plot(x_olcekli, svr_reg.predict(x_olcekli)) ## buda cizgileri cekicek  herbir x değeri için x_ölcekliyi tahmin et 
+plt.show()  ## kırmızı cizgiler datalar bizim tahminlerimiz mavi cizgi 
 '''
 print (svr_reg.predict([11]))
 '''
